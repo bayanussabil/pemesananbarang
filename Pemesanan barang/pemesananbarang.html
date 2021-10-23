@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>*{padding: 0; margin: 0;}</style>
+    <title>Pesanan Barang</title>
+</head>
+
+<body style="max-width: 1000px; border: 1px solid black; margin: auto; background-color: blanchedalmond; margin-top: 30px;">
+    <header style="background-color: gainsboro; border-bottom: 1px solid black;">
+        <nav style="display: flex; padding: 10px; border-bottom: 1px solid black;"> 
+            <ul style=" display: flex; list-style-type: none; gap: 10px;"> 
+              <li> 
+                <a style="text-decoration: none;" href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp; |
+              </li> 
+            </ul>
+            <ul style=" display: flex; list-style-type: none; gap: 10px; margin-left: auto;">  
+              <li> 
+                <a style="text-decoration: none;" href="/link">Generate Link</a>&nbsp;&nbsp;&nbsp;&nbsp; |
+              </li> 
+            </ul>
+            <ul style=" display: flex; list-style-type: none; gap: 10px; margin-left: auto;">
+              <li> 
+                <a style="text-decoration: none;" href="/history">Transaction History</a>&nbsp;&nbsp;&nbsp;&nbsp; |
+              </li> 
+            </ul>
+            <ul style=" display: flex; list-style-type: none; gap: 10px; margin-left: auto;">
+              <li> 
+                <a style="text-decoration: none;" href="/policy">Policy</a>&nbsp;&nbsp;&nbsp;&nbsp; |
+              </li>
+            </ul>
+            <ul style=" display: flex; list-style-type: none; gap: 10px; margin-left: auto;">
+              <li> 
+                <a style="text-decoration: none;" href="/logout">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </li>
+            </ul> 
+        </nav>
+    </header>
+    
+        <div style="width: 25%; float: left;">
+            <br>
+            <form style="margin-top: 60%; margin-left: 25px;" action="/client.php" method="POST" enctype="multipart/form-data">
+                <label>Upload Picture Here!!<em>
+                </em><br>
+                <input type="file" name="photo"></label>
+            </form><br>
+        </div>
+    
+    <div style="display: flex; gap: 10px; margin-top: 10px; padding: 10px;">
+        <main style="width: 100%;">
+            <table style="width: 150%; border-collapse: collapse;">
+                <tbody>
+                    <tr>
+                        <td>Title Here</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 5%;" type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>:</td>
+                        <td><textarea style="margin-left: 5%; border: 1px solid black;" name="Description" id="Description" cols="60" rows="5" placeholder="Text here"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Account Number</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 5%;" type="number" name="account"></td>
+                    </tr>
+                    <tr>
+                        <td>Bank</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 5%;" type="text" list="Bank" name="Bank">
+                            <datalist id="Bank"> >
+                                <option value="BCA">
+                                <option value="BNI">
+                                <option value="BSI">
+                                <option value="BRI">
+                                <option value="MANDIRI">
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Account Holder</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 5%;" type="text" name="account"></td>
+                    </tr>
+                    <tr>
+                        <td>Transaction</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 5%;" type="number" name="account"></td>
+                    </tr>    
+                </tbody>
+            </table>
+            <div style="margin-left: 128px;">
+                <a style="margin-left: 100px;">* if the transaction is for 3 person, choose 3 from the drop-down list</a>
+            </div>
+
+            <div style="margin-left: 120px; margin-top: 10px;">
+                <form action="checkbox" style="color: blue;">
+                    <input style="margin-left: 115px;" type="checkbox">
+                    <label id="1">Send to Mobile Phone</label> <br>
+                    <input style="margin-left: 115px;" type="checkbox">
+                    <label id="2">Send to Email</label>
+                </form>
+            </div>
+            <table style="width: 64%; border-collapse: collapse;">
+                    <tr>
+                        <td>Send to Mobile Phone</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 17%;" type="number" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td>Send to Email</td>
+                        <td>:</td>
+                        <td><input style="margin-left: 17%;" type="text" name="Email"></td>
+                    </tr>
+            </table> 
+            <br>
+            <button style="margin-left: 30%; background-color: green; width: 150px;">Generate Link</button>
+        </main>
+    </div>
+</body>
+</html>
